@@ -1,0 +1,271 @@
+body {
+    padding: 0;
+    margin: 0;
+    /* background-image: ; */
+    background-color: rgb(3, 3, 58);
+    position: sticky;
+    background-attachment: fixed;
+}
+* {
+    font-family: 'Handlee', cursive;
+    text-shadow: 3px 3px 20px pink;
+}
+
+header {
+    display: block;
+    margin: auto;
+    font-size: 4rem;
+    color: white;
+    text-align: center;
+    box-shadow: 2px 2px 10px white, inset 2px 2px 10px white;
+    /* border: 2px solid green; */
+}
+
+
+/* #navbar {
+
+} */
+
+ul {
+    display: flex;
+    list-style: none;
+    padding: 0.5rem;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    height: auto;
+}
+
+li {
+    padding: .4rem 1rem;
+    margin: .5rem;
+    border: 2px solid white;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    
+}
+
+li:hover {
+    background-color: rgb(225, 132, 248);
+    box-shadow: 2px 2px 10px white;
+}
+
+#mode {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid red; */
+    height: 34rem;
+    font-size: 1.5rem;
+    color: white;
+}
+
+/* dropdown  */
+
+#modedropdown:hover {
+    cursor: pointer;
+}
+
+#modedropdown {
+    color: white;
+}
+
+.modebox {
+    border: 2px solid white;
+    margin: 1rem;
+    padding: 1rem;
+    font-size: 1.7rem;
+    width: 250px;
+    text-align: center;
+}
+
+.modebox:hover {
+    box-shadow: 2px 2px 20px white;
+    cursor: pointer;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: black;
+}
+
+.message {
+    color: white;
+
+}
+
+#iconcontainer {
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+
+    margin: 1rem;
+}
+
+.icons {
+    /* border: 2px solid red; */
+    float: left;
+    padding: 0;
+    margin: 1rem;
+}
+
+svg:hover {
+    filter: drop-shadow(1px 1px 10px rgb(240, 237, 237));
+}
+
+svg {
+    height: 50px;
+    width: auto;
+
+}
+
+#contact {
+    font-size: 2rem;
+    color: white;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #e4a7f2;
+    min-width: 200px;
+    box-shadow: 2px 2px 16px 0px rgb(249, 246, 246);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #ee95e6
+}
+
+/* Show the dropdown menu on hover */
+#modedropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+/* css for board */
+#mainbody{
+    display: grid;
+    gap: inherit;
+    grid-template-columns: auto 506px auto;
+    margin-left: 5rem;
+}
+@media screen and (max-width: 862px){
+    #mainbody{
+        display: flex;
+        flex-direction: column;
+    }
+    #mainbody{
+        margin: 0;
+    }
+    li{
+        margin: 3px;
+        padding: 3px;
+    }
+}
+.playerinfo{
+    height: auto;
+    width: auto;
+    /* border: 2px solid yellow; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 2rem;
+    color: white;
+    padding-top: 2rem;
+    
+    
+}
+.board{
+    height: 34rem;
+    /* border: 2px solid yellow; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding: 0; */
+}
+#outerbox{
+    height: 70%;
+    width: 70%;
+    border: 2px solid white;
+    box-shadow: inset 2px 2px 10px pink,2px 2px 10px pink;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 33% 33% 33%;
+    gap: .3%;
+    border-radius: 15px;
+}
+.innerbox{
+    height: 77%;
+    width: 77%;
+    margin: 10%;
+    border: 2px solid white;
+    box-shadow: inset 2px 2px 10px pink,2px 2px 10px pink;
+    font-size: 3rem;
+    color: white;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+.innerbox:hover{
+    background-color: rgb(45, 84, 226);
+    cursor: pointer;
+}
+
+
+/* css for popup */
+.popup{
+    border: 2px solid white;
+    color: white;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+    padding: 1rem 3rem;
+    text-align: center;
+    font-size: 1.8rem;
+    box-shadow: 1px 1px 1000px black;
+    background-image: linear-gradient(120deg,blue,red);
+    border-radius: 15px;
+    display: none;
+}
+.popupbtn{
+    border: 2px solid white;
+    margin: 5px;
+    background-color: black;
+    border-radius: 15px;
+    display: block;
+    padding: .5rem;
+}
+.popupbtn:hover{
+    box-shadow: 1px 1px 20px white;
+}
